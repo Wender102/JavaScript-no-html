@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.inputVazio {
+  transition: border-color 0.5s ease-in-out;
+  animation: inputsVazios 2s infinite;
+}
+
+@keyframes inputsVazios {
+  0% {
+    border: 1px solid transparent;
+  }
+  50% {
+    border: 1px solid red;
+  }
+  100% {
+    border: 1px solid transparent;
+  }
+}
+body {
+  overflow-x: hidden;
+  background-color: rgba(224, 224, 224, 0.411);
+}
+body main {
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  margin: 20px auto;
+  overflow-x: visible;
+}
+body main div#configsPesquisa {
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+}
+body main div#configsPesquisa p {
+  margin-bottom: 15px;
+}
+body main div#configsPesquisa button {
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 6px 0px;
+  background-color: transparent;
+  border: 1px solid black;
+}
+body main section#localProducts {
+  width: 100%;
+  height: auto;
+  margin: 30px auto;
+}
+body main section#localProducts div.products {
+  width: 234px;
+  height: 300px;
+  display: inline-block;
+  margin: 15px 5px;
+  background-color: #fff;
+}
+body main section#localProducts div.products:hover {
+  transition: 200ms scale ease-in-out;
+  scale: 1.05;
+  cursor: pointer;
+}
+body main section#localProducts div.products:active {
+  transition: 50ms scale ease-in-out;
+  scale: 1;
+}
+body main section#localProducts div.products div.localImgProducts {
+  width: 100%;
+  height: 159px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+body main section#localProducts div.products div.localImgProducts button.starButton {
+  width: 20px;
+  height: 20px;
+  top: 14px;
+  left: 14px;
+  position: absolute;
+  background-color: transparent;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/Icons/star.png");
+  background-color: transparent;
+  border: none;
+}
+body main section#localProducts div.products div.localDescProducts {
+  width: calc(100% - 40px);
+  padding: 0px 20px;
+}
+body main section#localProducts div.products div.localDescProducts p {
+  margin: 12px 0px 3px;
+  font-size: 0.6em;
+}
+body main section#localProducts div.products div.localDescProducts strong {
+  font-weight: 300;
+  font-size: 0.8em;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    overflow-x: hidden;
+  }
+  body main section#localProducts div.products {
+    width: 150px;
+    height: 250px;
+  }
+}/*# sourceMappingURL=Pesquisar.css.map */

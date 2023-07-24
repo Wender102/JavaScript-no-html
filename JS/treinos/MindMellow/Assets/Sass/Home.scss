@@ -100,7 +100,7 @@ body {
             position: absolute;
             right: 100px;
             border-radius: 25px;
-            display: none;
+            display: none; // none
             overflow-x: hidden;
             overflow: hidden;
 
@@ -142,6 +142,7 @@ body {
                 }
 
                 &#salaNav {
+                    width: 100%;
 
                     div {
                         display: flex;
@@ -185,6 +186,83 @@ body {
                                 &.dentroDaSala {
                                     display: none;
                                 }
+                            }
+                        }
+                    }
+                }
+
+                &#sectionChatGPT {
+                    width: 100%;
+                    display: none;
+                    position: relative;
+                    color: $white;
+
+                    article#localChatGPT {
+                        width: 100%;
+                        height: 90%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        div {
+                            display: flex;
+                            gap: 10px;
+
+                            img {
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 5px;
+                            }
+
+                            p {
+                                margin: 0px;
+                                font-weight: 100;
+                            }
+                        }
+                    }
+
+                    div#localInputChatGPT {
+                        width: 95%;
+                        height: auto;
+                        bottom: 40px;
+                        position: absolute;
+                        left: 50%;
+                        transform: translate(-50%);
+
+                        #inputPerguntaChatGPT {
+                            width: calc(100% - 65px);
+                            padding: 13px 45px 13px 20px;
+                            border: none;
+                            background-color: #393737;
+                            border-radius: 10px;
+                            color: $white;
+                            resize: none;
+                            font-family: $fonte-Roboto;
+
+                            &::-webkit-scrollbar {
+                                width: 1px;
+                            }
+
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+
+                        button {
+                            width: 30px;
+                            height: 30px;
+                            top: 6px;
+                            right: 5px;
+                            background-color: transparent;
+                            border: none;
+                            position: absolute;
+                            border-radius: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            svg {
+                                color: #6b6b6b;
                             }
                         }
                     }

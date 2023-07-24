@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/icones/logo.png" type="image/x-icon">
     <title>Home | treeFy</title>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8133826753342128" crossorigin="anonymous"></script>
     
     <!--? Style -->
     <link rel="stylesheet" href="assets/sass/general.css">
@@ -34,6 +36,24 @@
     </div>
 
     <section id="localBanners"></section>
+
+    <!--? Button Lofi mod -->
+    <div class="switch-container" title="Lofi Mode">
+        <input type="checkbox" id="toggle-switch" class="toggle-input">
+        <label for="toggle-switch" class="toggle-label"></label>
+    </div>
+
+    <section id="pagLofiMode">
+        <div id="hrPc">
+            <div> 
+                <h1 id="hrPcH1">0:00</h1> 
+            </div>
+        </div>
+
+        <img src="assets/img/lofiMode/8.gif" id="imgLofiMode"></img>
+
+        <div id="darken"></div>
+    </section>
 
     <main>
         <section id="Recente">
@@ -70,7 +90,7 @@
     <!--? Pagina de adicionar músicas -->
     <section id="pagAddMusicas" class="paginas">
         <article>
-            <h1>Poste as suas músicas favorias aqui</h1>
+            <h1>Poste as suas músicas favoritas aqui</h1>
             <button id="btnFecharAddMusic"></button>
 
             <div>
@@ -229,12 +249,6 @@
                     <h1 id="nomeUserPagPessoal">Nome User</h1>
                     <p id="descPerfilPagPessoal">...</p>
                     <div id="conquistas">
-                        <!-- <img src="assets/img/icones/icon_first.png" alt="">
-                        <img src="assets/img/icones/icon_first2.png" alt="">
-                        <img src="assets/img/icones/icon_second.png" alt="">
-                        <img src="assets/img/icones/icon_third.png" alt="">
-                        <img src="assets/img/icones/icon_verificado.webp" alt="">
-                        <img src="assets/img/icones/icon_first.png" alt=""> -->
                     </div>
                 </div>
                 <textarea name="" id="nomeDaPlaylist" cols="16" rows="1" placeholder="Nova Playlist" maxlength="14" class="animationTextAreaVazio"></textarea>
@@ -495,6 +509,7 @@
     <script src="assets/js/ranking.js"></script>
     <script src="assets/js/adicionarAmigo.js"></script>
     <script src="assets/js/criarLetras.js"></script>
+    <script src="assets/js/lofiMode.js"></script>
     <!-- <script src="assets/js/recuperarMusicas.js"></script> -->
 </body>
 </html>

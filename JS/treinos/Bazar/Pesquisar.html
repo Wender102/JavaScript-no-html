@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazar | Pesquisar</title>
+
+    <!--! Styles -->
+    <link rel="stylesheet" href="assets/sass/Geral.css">
+    <link rel="stylesheet" href="assets/sass/Home.css">
+    <link rel="stylesheet" href="assets/sass/Pesquisar.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><button id="menuButton"></button> </li>
+            <li><h1>Bazar</h1></li>
+            <li><button id="cartButton"></button> </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="configsPesquisa">
+            <p id="pesuisaFeito">All Products</p>
+            <div>
+                <button><img src="assets/img/Icons/filter.png"> Filtro</button>
+            </div>
+        </div>
+
+        <section id="localProducts">
+            <div class="products">
+                <div class="localImgProducts">
+                    <button class="starButton"></button>
+                </div>
+                <div class="localDescProducts">
+                    <p>Bazar</p>
+                    <strong>REID Lace-Up Shoes Multi</strong>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!--! Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+    <script src="assets/js/firebase.js"></script>
+
+    <!--! Scripts -->
+    <script src="assets/js/Pesquisar.js"></script>
+</body>
+</html>

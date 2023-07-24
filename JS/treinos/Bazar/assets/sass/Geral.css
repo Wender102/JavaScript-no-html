@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.inputVazio {
+  transition: border-color 0.5s ease-in-out;
+  animation: inputsVazios 2s infinite;
+}
+
+@keyframes inputsVazios {
+  0% {
+    border: 1px solid transparent;
+  }
+  50% {
+    border: 1px solid red;
+  }
+  100% {
+    border: 1px solid transparent;
+  }
+}/*# sourceMappingURL=Geral.css.map */

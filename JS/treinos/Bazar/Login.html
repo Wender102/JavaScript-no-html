@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazar | Login</title>
+
+    <!--! Styles -->
+    <link rel="stylesheet" href="assets/sass/Geral.css">
+    <link rel="stylesheet" href="assets/sass/Login.css">
+</head>
+<body>
+    <section>
+        <h1>Bazar</h1>
+
+        <p>Como devemos te chamar</p>
+        <input type="text" placeholder="Nome Completo..." id="inputName">
+        <p>Crie uma conta ou faça login para ter acesso aos nossos produtos. Aguardamos você!</p>
+
+        <button onclick="login()">Cadastro | Login</button>
+    </section>
+    
+    <!--! Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+    <script src="assets/js/firebase.js"></script>
+
+    <!--! Scripts -->
+    <script src="assets/js/login.js"></script>
+</body>
+</html>

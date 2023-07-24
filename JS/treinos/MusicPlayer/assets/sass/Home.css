@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "fontewoff2";
+  src: url("../fonts/pxiKyp0ihIEF2isfFJU.woff2");
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -321,6 +325,117 @@ body nav ul li button#EditarPlaylistsBtn {
 }
 body nav ul li button#AddMusicaBtn {
   background-image: url(../img/icones/addMusic.png);
+}
+body .switch-container {
+  width: 40px;
+  height: 15px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 9;
+}
+body .switch-container span {
+  display: block;
+  position: absolute;
+  width: 100px;
+  left: -75px;
+  color: #fff;
+  top: -2px;
+  font-size: 13px;
+  font-weight: 600;
+}
+body .switch-container .toggle-input {
+  display: none;
+}
+body .switch-container .toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(204, 204, 204, 0.4862745098);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+body .switch-container .toggle-input:checked + .toggle-label {
+  background-color: #35ffdb;
+}
+body .switch-container .toggle-label::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+body .switch-container .toggle-input:checked + .toggle-label::before {
+  transform: translateX(20px);
+}
+body section#pagLofiMode {
+  width: 100%;
+  height: 100vh;
+  right: 0px;
+  z-index: 8;
+  background-color: #000;
+  position: fixed;
+  top: 0px;
+  display: none;
+}
+body section#pagLofiMode div#hrPc {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+  font-family: "fontewoff2";
+  color: #fff;
+  position: absolute;
+  top: 0px;
+  z-index: 8;
+  animation: imgAnimator 1.2s 0.2s both;
+}
+body section#pagLofiMode div#hrPc div {
+  text-align: center;
+}
+body section#pagLofiMode div#hrPc div p {
+  font-size: 4em;
+}
+body section#pagLofiMode div#hrPc div h1 {
+  font-size: 15em;
+  margin: -50px 0px 0px;
+}
+body section#pagLofiMode img#imgLofiMode {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  animation: imgAnimator 1.2s 0.2s both;
+}
+@keyframes imgAnimator {
+  0% {
+    transform: scaleY(0) scaleX(0);
+    filter: brightness(15) blur(0px);
+  }
+  20% {
+    transform: scaleY(0.02) scaleX(0.8);
+    filter: brightness(15) blur(0px);
+  }
+}
+body section#pagLofiMode div#darken {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 8;
 }
 body section#localBanners {
   max-width: 1288px;

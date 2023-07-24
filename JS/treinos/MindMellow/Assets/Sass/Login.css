@@ -77,7 +77,7 @@ body main article {
   color: #fff;
 }
 body main article input {
-  width: 100%;
+  width: calc(100% - 28px);
   margin: 14px 0px 8px;
   background-color: rgba(170, 170, 170, 0.5098039216);
   border: none;

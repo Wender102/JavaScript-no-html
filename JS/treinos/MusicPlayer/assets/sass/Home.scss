@@ -92,6 +92,132 @@ body {
         }
     }
 
+    //? Button LoFi mod;
+    .switch-container {
+        width: 40px;
+        height: 15px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 9;
+
+        span {
+            display: block;
+            position: absolute;
+            width: 100px;
+            left: -75px;
+            color: $white;
+            top: -2px;
+            font-size: 13px;
+            font-weight: 600;
+            // font-family: $fonte-Rubik;
+        }
+
+        .toggle-input {
+            display: none;
+        }
+        
+        .toggle-label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #cccccc7c;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .toggle-input:checked + .toggle-label {
+            background-color: $cor0;
+        }
+        
+        .toggle-label::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 3px;
+            width: 15px;
+            height: 15px;
+            background-color: #fff;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+        
+        .toggle-input:checked + .toggle-label::before {
+            transform: translateX(20px);
+        }
+    }
+
+    section#pagLofiMode {
+        width: 100%;
+        height: 100vh;
+        right: 0px;
+        z-index: 8;
+        background-color: $Black;
+        position: fixed;
+        top: 0px;
+        display: none;
+
+        div#hrPc {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: end;
+            font-family: $fonte-Woff2;
+            color: $white;
+            position: absolute;
+            top: 0px;
+            z-index: 8;
+            animation: imgAnimator 1.2s 0.2s both;
+
+            div {
+                text-align: center;
+
+                p {
+                    font-size: 4em;
+                }
+
+                h1 {
+                    font-size: 15em;
+                    margin: -50px 0px 0px;
+                }
+            }
+        }
+
+        img#imgLofiMode {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            object-position: center;
+            animation: imgAnimator 1.2s 0.2s both;
+        }
+
+        @keyframes imgAnimator {
+            0% {
+                transform: scaleY(0) scaleX(0);
+                filter: brightness(15) blur(0px);
+            }
+            20% {
+                transform: scaleY(0.02) scaleX(0.8);
+                filter: brightness(15) blur(0px);
+            }
+        }
+
+        div#darken {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.3);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 8;
+        }
+    }
+
     //? ----------
     section#localBanners {
         max-width: 1288px;

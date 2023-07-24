@@ -1,0 +1,115 @@
+@import 'Geral.scss';
+
+body {
+    overflow-x: hidden;
+    background-color: rgba(224, 224, 224, 0.411);
+
+    main {
+        width: 100%;
+        min-height: 100vh;
+        display: block;
+        margin: 20px auto;
+        overflow-x: visible;
+
+        div#configsPesquisa {
+            width: 100%;
+            margin: auto;
+            padding: 10px;
+
+            p {
+                margin-bottom: 15px;
+            }
+
+            button {
+                width: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                padding: 6px 0px;
+                background-color: transparent;
+                border: 1px solid black;
+            }
+        }
+
+        section#localProducts {
+            width: 100%;
+            height: auto;
+            margin: 30px auto;
+            
+            div.products {
+                width: 234px;
+                height: 300px;
+                display: inline-block;
+                margin: 15px 5px;
+                background-color: $cor2;
+
+                &:hover {
+                    transition: 200ms scale ease-in-out;
+                    scale: 1.05;
+                    cursor: pointer;
+                }
+
+                &:active {
+                    transition: 50ms scale ease-in-out;
+                    scale: 1;
+                }
+
+                div.localImgProducts {
+                    width: 100%;
+                    height: 159px;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    position: relative;
+
+                    button.starButton {
+                        width: 20px;
+                        height: 20px;
+                        top: 14px;
+                        left: 14px;
+                        position: absolute;
+                        background-color: transparent;
+                        background-size: contain;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-image: url('../img/Icons/star.png');
+                        background-color: transparent;
+                        border: none;
+                    }
+                }
+
+                div.localDescProducts {
+                    width: calc(100% - 40px);
+                    padding: 0px 20px;
+
+                    p {
+                        margin: 12px 0px 3px;
+                        font-size: 0.6em;
+                    }
+    
+                    strong {
+                        font-weight: 300;
+                        font-size: 0.8em;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+//? Media Screen
+@media screen and (max-width: 500px) {
+    body {
+        overflow-x: hidden;
+    
+        main {
+            section#localProducts {
+                div.products {
+                    width: 150px;
+                    height: 250px;
+                }
+            }
+        }
+    }
+}

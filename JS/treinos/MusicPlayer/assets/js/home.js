@@ -573,6 +573,7 @@ let checarRepetidas = false
 let atualizadoMusicaOuvindoAgr = false
 let hrAtualizada = false
 function darPlayNaMusica(lista) {
+    // localStorage.setItem('Lista', JSON.stringify(lista))
     estadoMusica = 'play'
     musicaLetraTocandoAgr = lista
     contadorLinhasLetra = 0

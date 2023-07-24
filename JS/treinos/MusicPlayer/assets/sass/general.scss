@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
+@font-face {
+    font-family: 'fontewoff2';
+    src: url('../fonts/pxiKyp0ihIEF2isfFJU.woff2');
+}
+
 //? Cores padrão da página 
 $white: #fff;
 $Black: #000;
@@ -22,6 +27,7 @@ $sombra2: #121111;
 $fonte-Poppins: 'Poppins', sans-serif;
 $fonte-Carter: 'Carter One', cursive;
 $fonte-Rubik: 'Rubik', sans-serif;
+$fonte-Woff2: 'fontewoff2';
 
 
 //? Style

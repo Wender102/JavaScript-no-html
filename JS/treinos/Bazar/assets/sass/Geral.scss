@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+//? Fontes
+$fonteMontserrat: 'Montserrat', sans-serif;;
+
+//? Cores
+$cor1: #000;
+$cor2: #fff;
+$cor3: #F5F5F5;
+$cor4: #A0A0A0;
+$cor5: #333333;
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: $fonteMontserrat;
+}
+
+@mixin button {
+    padding: 15px 20px;
+    background-color: #333333;
+    border: none;
+    color: #fff;
+}
+
+.inputVazio {
+    transition: border-color 0.5s ease-in-out;
+    animation: inputsVazios 2s infinite;
+}
+
+@keyframes inputsVazios {
+    0% {
+        border: 1px solid transparent;
+    }
+
+    50% {
+        border: 1px solid red;
+    }
+
+    100% {
+        border: 1px solid transparent;
+    }
+}

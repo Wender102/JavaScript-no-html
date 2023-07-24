@@ -35,7 +35,7 @@ body {
             color: $white;
 
             input {
-                width: 100%;
+                width: calc(100% - 28px);
                 margin: 14px 0px 8px;
                 background-color: $cor2;
                 border: none;

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="Assets/Sass/Home.css">
 </head>
 <body>
-    <img src="Assets/img/backgrounds/0.png" class="backgroundsPage">
+    <img src="Assets/img/backgrounds/1.png" data-src="Assets/img/backgrounds/1.png"  class="backgroundsPage">
     <img src="" id="backgroundImg2" class="backgroundsPage">
 
     <article id="localPerfilUsers"></article>
@@ -17,11 +17,12 @@
     <nav>
         <ul>
             <li><img src="" id="fotoDePerfilUser"></li>
-            <li id="editIcon" class="buttonsNav"></li>
-            <li id="plusIcon" class="buttonsNav"></li>
-            <li id="coroaIcon" class="buttonsNav"></li>
-            <li id="relogioIcon" class="buttonsNav"></li>
-            <li id="configIcon" class="buttonsNav"></li>
+            <li id="editIcon" class="buttonsNav" title="Editar Sala"></li>
+            <li id="plusIcon" class="buttonsNav" title="Criar | Entrar em um sala"></li>
+            <li id="chatGPT" class="buttonsNav" title="Criar | Entrar em um sala"></li>
+            <li id="coroaIcon" class="buttonsNav" title=""></li>
+            <li id="relogioIcon" class="buttonsNav" title="Relógio Pomodoro"></li>
+            <li id="configIcon" class="buttonsNav" title="Configurações"></li>
         </ul>
 
         <article id="pagOpcoes">
@@ -41,6 +42,17 @@
                 </div>
 
                 <div class="localSalas"></div>
+            </section>
+            <section id="sectionChatGPT" class="abaNav">
+                <article id="localChatGPT">
+                </article>
+
+                <div id="localInputChatGPT">
+                    <textarea id="inputPerguntaChatGPT" placeholder="Envie uma mensagem..." oninput="AtualizarInputChatGPT()" cols="30" rows="1"></textarea>
+                    <button id="btnEnviarMsgChatGPT" onclick="enviarPergunta()">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" class="h-4 w-4 m-1 md:m-0" stroke-width="2"><path d="M.5 1.163A1 1 0 0 1 1.97.28l12.868 6.837a1 1 0 0 1 0 1.766L1.969 15.72A1 1 0 0 1 .5 14.836V10.33a1 1 0 0 1 .816-.983L8.5 8 1.316 6.653A1 1 0 0 1 .5 5.67V1.163Z" fill="currentColor" id="svgBtnChatGPT"></path></svg>
+                    </button>
+                </div>
             </section>
         </article>
     </nav>
@@ -92,7 +104,7 @@
     <script src="assets/Js/Firebase.js"></script>
 
     <!--! Script -->
-    <script src="assets/Js/Home.js"></script>
+    <script src="assets/Js/Teste.js"></script>
     <script src="assets/Js/MusicasLofi.js"></script>
 
     <script>

@@ -56,6 +56,7 @@ function musicasTreeFy() {
             })
         })
     } pesquisarPlaylist('Mind Mellow').then(() => {
+        let feito = false
         function shuffleArray(array) {
             var currentIndex = array.length
             var temporaryValue, randomIndex
@@ -80,7 +81,8 @@ function musicasTreeFy() {
         for (let c = 0; c < playlistEmbaralhada.length; c++) {
             playlist.push(playlistEmbaralhada[c].LinkAudio)
 
-            if(c + 1 >= playlistEmbaralhada.length) {
+            if(c + 1 >= playlistEmbaralhada.length && feito == false) {
+                feito = true
                 
                 var currentTrack = 0
                 var audio = new Audio()
@@ -88,6 +90,7 @@ function musicasTreeFy() {
                 audio.addEventListener('ended', playNextRandomTrack)
                 shuffledPlaylist = playlist
                 function playNextRandomTrack() {
+
                     if (currentTrack < shuffledPlaylist.length) {
                         currentTrack++
                         audio.src = shuffledPlaylist[currentTrack]
@@ -127,6 +130,7 @@ function musicasTreeFy() {
                         })
                 
                     } else {
+                        playNextRandomTrack()
                         currentTrack = 0
                     }
                 }
@@ -137,6 +141,16 @@ function musicasTreeFy() {
                         tocando = true
                         playNextRandomTrack()
                     }
+                })
+
+                document.querySelector('#musicaTocandoAgr').addEventListener('click', () => {
+                    if(tocando == false) {
+                        tocando = true
+                    } else {
+                        tocando = false
+                    }
+
+                    playNextRandomTrack()
                 })
             }
         }

@@ -1,0 +1,60 @@
+@import 'Geral.scss';
+
+body {
+    nav {
+        width: 100%;
+        height: auto;
+        padding: 20px 0px;
+        box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.178);
+        background-color: $cor2;
+
+        ul {
+            width: 95%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            li {
+                button {
+                    width: 25px;
+                    height: 25px;
+                    border: none;
+                    background-color: transparent;
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+
+                button#menuButton {
+                    background-image: url('../img/Icons/menuIcon.png');
+                }
+
+                button#cartButton {
+                    background-image: url('../img/Icons/cartIcon.png');
+                }
+
+                h1 {
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+
+    main {
+        width: 100%;
+        margin-top: 24px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 14px;
+
+        img {
+            &:hover {
+                transition: 200ms scale ease-in-out;
+                scale: 1.05;
+            }
+        }
+    }
+}
